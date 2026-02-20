@@ -1,90 +1,86 @@
-# Welcome to GitHub
+# 🧠 Psychology Mind Bender 🧠
 
-Welcome to GitHub—where millions of developers work together on software. Ready to get started? Let’s learn how this all works by building and publishing your first GitHub Pages website!
+A fun, interactive website featuring hilarious and thought-provoking psychology questions with smooth animations and engaging interactivity!
 
-## Repositories
+## 🎯 Features
 
-Right now, we’re in your first GitHub **repository**. A repository is like a folder or storage space for your project. Your project's repository contains all its files such as code, documentation, images, and more. It also tracks every change that you—or your collaborators—make to each file, so you can always go back to previous versions of your project if you make any mistakes.
+- **10 Funny Psychology Questions** - Designed to make you think and laugh
+- **Smooth Animations** - Bounce, glow, slide-in, gradient shifts, pulse, and float effects
+- **Interactive Elements** - Reveal/hide answers, shuffle questions, track brain power
+- **Responsive Design** - Works perfectly on desktop, tablet, and mobile devices
+- **Keyboard Shortcuts** - Press "S" to shuffle or "R" to reset
 
-This repository contains three important files: The HTML code for your first website on GitHub, the CSS stylesheet that decorates your website with colors and fonts, and the **README** file. It also contains an image folder, with one image file.
+## 🚀 Quick Start
 
-## Describe your project
+### Running Locally
 
-You are currently viewing your project's **README** file. **_README_** files are like cover pages or elevator pitches for your project. They are written in plain text or [Markdown language](https://guides.github.com/features/mastering-markdown/), and usually include a paragraph describing the project, directions on how to use it, who authored it, and more.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/singaravel1000/psychology-mind-bender.git
+   cd psychology-mind-bender
+   ```
 
-[Learn more about READMEs](https://help.github.com/en/articles/about-readmes)
+2. **Open in browser** - Choose one option:
+   - **Option A**: Double-click `index.html`
+   - **Option B**: Use a local server:
+     ```bash
+     python -m http.server 8000
+     # Then open http://localhost:8000
+     ```
 
-## Your first website
-
-**GitHub Pages** is a free and easy way to create a website using the code that lives in your GitHub repositories. You can use GitHub Pages to build a portfolio of your work, create a personal website, or share a fun project that you coded with the world. GitHub Pages is automatically enabled in this repository, but when you create new repositories in the future, the steps to launch a GitHub Pages website will be slightly different.
-
-[Learn more about GitHub Pages](https://pages.github.com/)
-
-## Rename this repository to publish your site
-
-We've already set-up a GitHub Pages website for you, based on your personal username. This repository is called `hello-world`, but you'll rename it to: `username.github.io`, to match your website's URL address. If the first part of the repository doesn’t exactly match your username, it won’t work, so make sure to get it right.
-
-Let's get started! To update this repository’s name, click the `Settings` tab on this page. This will take you to your repository’s settings page. 
-
-![repo-settings-image](https://user-images.githubusercontent.com/18093541/63130482-99e6ad80-bf88-11e9-99a1-d3cf1660b47e.png)
-
-Under the **Repository Name** heading, type: `username.github.io`, where username is your username on GitHub. Then click **Rename**—and that’s it. When you’re done, click your repository name or browser’s back button to return to this page.
-
-<img width="1039" alt="rename_screenshot" src="https://user-images.githubusercontent.com/18093541/63129466-956cc580-bf85-11e9-92d8-b028dd483fa5.png">
-
-Once you click **Rename**, your website will automatically be published at: https://your-username.github.io/. The HTML file—called `index.html`—is rendered as the home page and you'll be making changes to this file in the next step.
-
-Congratulations! You just launched your first GitHub Pages website. It's now live to share with the entire world
-
-## Making your first edit
-
-When you make any change to any file in your project, you’re making a **commit**. If you fix a typo, update a filename, or edit your code, you can add it to GitHub as a commit. Your commits represent your project’s entire history—and they’re all saved in your project’s repository.
-
-With each commit, you have the opportunity to write a **commit message**, a short, meaningful comment describing the change you’re making to a file. So you always know exactly what changed, no matter when you return to a commit.
-
-## Practice: Customize your first GitHub website by writing HTML code
-
-Want to edit the site you just published? Let’s practice commits by introducing yourself in your `index.html` file. Don’t worry about getting it right the first time—you can always build on your introduction later.
-
-Let’s start with this template:
+## 📁 Project Structure
 
 ```
-<p>Hello World! I’m [username]. This is my website!</p>
+psychology-mind-bender/
+├── index.html          # Main website with 10 questions
+├── styles.css          # CSS with 10+ animations
+├── script.js           # Interactive JavaScript
+├── README.md           # This file
+└── images/             # Assets folder
 ```
 
-To add your introduction, copy our template and click the edit pencil icon at the top right hand corner of the `index.html` file.
+## 🎨 Animation Effects
 
-<img width="997" alt="edit-this-file" src="https://user-images.githubusercontent.com/18093541/63131820-0794d880-bf8d-11e9-8b3d-c096355e9389.png">
+- Bounce, Glow, Pulse, Float, Slide-in, Shake, Spin, Gradient Shift, and more!
 
+## 🎮 How to Use
 
-Delete this placeholder line:
+1. Read the funny psychology questions
+2. Click "Reveal Answer" to see the psychology explanation
+3. Watch your "Brain Power" meter increase
+4. Shuffle questions or reset to start fresh
+5. Use keyboard shortcuts (S = Shuffle, R = Reset)
 
-```
-<p>Welcome to your first GitHub Pages website!</p>
-```
+## 🧠 10 Questions Included
 
-Then, paste the template to line 15 and fill in the blanks.
+1. Why is "building" called that if it's already built?
+2. Do you ever really wake up or just forget you were asleep?
+3. If you try to fail and succeed, did you fail?
+4. Why is "abbreviation" such a long word?
+5. Do objects make sound if no one's around to hear?
+6. Can you dream you're awake while actually dreaming?
+7. Why do we "park in driveways" but "drive on parkways"?
+8. If you fear heights, does that include stairs?
+9. Why don't we see baby pigeons in cities?
+10. What's the speed of dark?
 
-<img width="1032" alt="edit-githuboctocat-index" src="https://user-images.githubusercontent.com/18093541/63132339-c3a2d300-bf8e-11e9-8222-59c2702f6c42.png">
+## 💻 Technologies
 
+- HTML5, CSS3 (with animations), JavaScript (vanilla)
+- No dependencies - works offline!
 
-When you’re done, scroll down to the `Commit changes` section near the bottom of the edit page. Add a short message explaining your change, like "Add my introduction", then click `Commit changes`.
+## 🎯 Browser Support
 
+Chrome ✅ | Firefox ✅ | Safari ✅ | Edge ✅ | Mobile ✅
 
-<img width="1030" alt="add-my-username" src="https://user-images.githubusercontent.com/18093541/63131801-efbd5480-bf8c-11e9-9806-89273f027d16.png">
+## 📝 Customization
 
-Once you click `Commit changes`, your changes will automatically be published on your GitHub Pages website. Refresh the page to see your new changes live in action.
+Add more questions by editing `index.html` and adding new question card divs. Change colors by modifying gradient values in `styles.css`.
 
-:tada: You just made your first commit! :tada:
+## 👨‍💻 Author
 
-## Extra Credit: Keep on building!
+Created with 💚 for curious minds!
 
-Change the placeholder Octocat gif on your GitHub Pages website by [creating your own personal Octocat emoji](https://myoctocat.com/build-your-octocat/) or [choose a different Octocat gif from our logo library here](https://octodex.github.com/). Add that image to line 12 of your `index.html` file, in place of the `<img src=` link.
+---
 
-Want to add even more code and fun styles to your GitHub Pages website? [Follow these instructions](https://github.com/github/personal-website) to build a fully-fledged static website.
-
-![octocat](./images/create-octocat.png)
-
-## Everything you need to know about GitHub
-
-Getting started is the hardest part. If there’s anything you’d like to know as you get started with GitHub, try searching [GitHub Help](https://help.github.com). Our documentation has tutorials on everything from changing your repository settings to configuring GitHub from your command line.
+**Enjoy the mind-bending questions and have fun!** 🎪✨

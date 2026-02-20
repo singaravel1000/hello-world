@@ -1,18 +1,194 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funny Psychology Questions</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <div class="background-animation"></div>
+    
+    <div class="container">
+        <header>
+            <h1 class="title-main">🧠 Psychology Mind Bender 🧠</h1>
+            <p class="subtitle">Funny questions that make you think... or laugh!</p>
+        </header>
 
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+        <div class="stats-container">
+            <div class="stat-box">
+                <span class="stat-label">Questions Explored:</span>
+                <span class="stat-number" id="questionsCount">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Brain Power:</span>
+                <span class="stat-number"><span id="brainPower">0</span>%</span>
+            </div>
+        </div>
 
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
+        <div class="questions-grid">
+            <div class="question-card" data-index="1">
+                <div class="card-header">
+                    <span class="question-number">Q1</span>
+                    <span class="difficulty-badge">Easy Brain</span>
+                </div>
+                <div class="card-content">
+                    <h3>Why do we call it a "building"...</h3>
+                    <p class="question-text">...if it's already built? 🏗️</p>
+                    <button class="reveal-btn">Reveal Answer</button>
+                    <div class="answer hidden">
+                        <p><strong>Because it's still standing!</strong> But seriously, it's called building from the process of construction, not the final state.</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="question-card" data-index="2">
+                <div class="card-header">
+                    <span class="question-number">Q2</span>
+                    <span class="difficulty-badge">Medium Brain</span>
+                </div>
+                <div class="card-content">
+                    <h3>Do you ever really wake up...</h3>
+                    <p class="question-text">...or just forget you were asleep? 😴</p>
+                    <button class="reveal-btn">Reveal Answer</button>
+                    <div class="answer hidden">
+                        <p><strong>Philosophical overload!</strong> Our brains create amnesia for sleep, so technically, you might never "know" you woke up if you don't remember falling asleep.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" data-index="3">
+                <div class="card-header">
+                    <span class="question-number">Q3</span>
+                    <span class="difficulty-badge">Medium Brain</span>
+                </div>
+                <div class="card-content">
+                    <h3>If you try to fail...</h3>
+                    <p class="question-text">...and succeed, did you fail? 🤔</p>
+                    <button class="reveal-btn">Reveal Answer</button>
+                    <div class="answer hidden">
+                        <p><strong>Paradox alert!</strong> This touches on the psychology of intentionality. Your goal was to fail, so success means you failed at your goal—a delightful mental loop!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" data-index="4">
+                <div class="card-header">
+                    <span class="question-number">Q4</span>
+                    <span class="difficulty-badge">Hard Brain</span>
+                </div>
+                <div class="card-content">
+                    <h3>Why is abbreviation...</h3>
+                    <p class="question-text">...such a long word? 📝</p>
+                    <button class="reveal-btn">Reveal Answer</button>
+                    <div class="answer hidden">
+                        <p><strong>Linguistic irony!</strong> Psychologically, our brains focus on meaning over form, so the contradiction doesn't bother us—until someone points it out!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" data-index="5">
+                <div class="card-header">
+                    <span class="question-number">Q5</span>
+                    <span class="difficulty-badge">Medium Brain</span>
+                </div>
+                <div class="card-content">
+                    <h3>If a tree falls in the forest...</h3>
+                    <p class="question-text">...and no one's around, does it make a sound? 🌳</p>
+                    <button class="reveal-btn">Reveal Answer</button>
+                    <div class="answer hidden">
+                        <p><strong>Depends on your psychology!</strong> Physics: yes, it makes sound waves. Perception: no, sound requires an ear and brain to interpret vibrations. Psychology wins!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" data-index="6">
+                <div class="card-header">
+                    <span class="question-number">Q6</span>
+                    <span class="difficulty-badge">Hard Brain</span>
+                </div>
+                <div class="card-content">
+                    <h3>Can you dream that you're awake...</h3>
+                    <p class="question-text">...and be dreaming right now? 💭</p>
+                    <button class="reveal-btn">Reveal Answer</button>
+                    <div class="answer hidden">
+                        <p><strong>Welcome to lucid dreaming!</strong> Your brain can experience the sensation of being awake while dreaming. Who's to say this isn't a dream right now?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" data-index="7">
+                <div class="card-header">
+                    <span class="question-number">Q7</span>
+                    <span class="difficulty-badge">Easy Brain</span>
+                </div>
+                <div class="card-content">
+                    <h3>Why do we park in...</h3>
+                    <p class="question-text">...driveways but drive on parkways? 🚗</p>
+                    <button class="reveal-btn">Reveal Answer</button>
+                    <div class="answer hidden">
+                        <p><strong>English is weird!</strong> Our brains evolved with language quirks. It's historical terminology that stuck, and our pattern-recognition brain never flagged the contradiction.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" data-index="8">
+                <div class="card-header">
+                    <span class="question-number">Q8</span>
+                    <span class="difficulty-badge">Hard Brain</span>
+                </div>
+                <div class="card-content">
+                    <h3>If you're afraid of...</h3>
+                    <p class="question-text">...heights, does that include stairs? 😰</p>
+                    <button class="reveal-btn">Reveal Answer</button>
+                    <div class="answer hidden">
+                        <p><strong>Psychology of fear!</strong> Acrophobia is triggered by perception of danger. A staircase feels different—enclosed, controlled, safe—so your amygdala (fear center) chills out.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" data-index="9">
+                <div class="card-header">
+                    <span class="question-number">Q9</span>
+                    <span class="difficulty-badge">Medium Brain</span>
+                </div>
+                <div class="card-content">
+                    <h3>Why don't we ever see...</h3>
+                    <p class="question-text">...baby pigeons in the city? 🐦</p>
+                    <button class="reveal-btn">Reveal Answer</button>
+                    <div class="answer hidden">
+                        <p><strong>Cognitive bias alert!</strong> Pigeons stay in nests for 25-32 days before fledging. We're just not there to see them, but our brain assumes they don't exist!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card" data-index="10">
+                <div class="card-header">
+                    <span class="question-number">Q10</span>
+                    <span class="difficulty-badge">Hard Brain</span>
+                </div>
+                <div class="card-content">
+                    <h3>What's the speed of dark? ⚫</h3>
+                    <p class="question-text">Is it faster than light?</p>
+                    <button class="reveal-btn">Reveal Answer</button>
+                    <div class="answer hidden">
+                        <p><strong>Trick question psychology!</strong> Dark is the absence of light—it has no speed. Our brains love symmetry, so this question feels deep but it's actually meaningless!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fun-section">
+            <h2 class="section-title">🎯 Test Your Brain</h2>
+            <button class="btn-large" id="shuffle-btn">Shuffle Questions</button>
+            <button class="btn-large btn-reset" id="reset-btn">Reset All</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with 💚 for curious minds | © 2026 Psychology Mind Bender</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
