@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funny Psychology Questions</title>
+    <title>Psychology Mood Quiz</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,18 +11,18 @@
     
     <div class="container">
         <header>
-            <h1 class="title-main">🧠 Psychology Mind Bender 🧠</h1>
-            <p class="subtitle">Funny questions that make you think... or laugh!</p>
+            <h1 class="title-main">🧠 Psychology Mood Quiz 🧠</h1>
+            <p class="subtitle">Discover your current mood through psychology!</p>
         </header>
 
         <div class="stats-container">
             <div class="stat-box">
-                <span class="stat-label">Questions Explored:</span>
-                <span class="stat-number" id="questionsCount">0</span>
+                <span class="stat-label">Questions Answered:</span>
+                <span class="stat-number" id="questionsCount">0/10</span>
             </div>
             <div class="stat-box">
-                <span class="stat-label">Brain Power:</span>
-                <span class="stat-number"><span id="brainPower">0</span>%</span>
+                <span class="stat-label">Current Mood:</span>
+                <span class="stat-emoji" id="moodEmoji">😐</span>
             </div>
         </div>
 
@@ -30,14 +30,14 @@
             <div class="question-card" data-index="1">
                 <div class="card-header">
                     <span class="question-number">Q1</span>
-                    <span class="difficulty-badge">Easy Brain</span>
                 </div>
                 <div class="card-content">
-                    <h3>Why do we call it a "building"...</h3>
-                    <p class="question-text">...if it's already built? 🏗️</p>
-                    <button class="reveal-btn">Reveal Answer</button>
-                    <div class="answer hidden">
-                        <p><strong>Because it's still standing!</strong> But seriously, it's called building from the process of construction, not the final state.</p>
+                    <h3>When you wake up in the morning, how do you feel?</h3>
+                    <div class="options-container">
+                        <button class="option-btn" data-mood="Happy">🌟 Energized and ready!</button>
+                        <button class="option-btn" data-mood="Calm">😌 Peaceful and relaxed</button>
+                        <button class="option-btn" data-mood="Anxious">😟 Worried about the day</button>
+                        <button class="option-btn" data-mood="Sad">😔 Tired and unmotivated</button>
                     </div>
                 </div>
             </div>
@@ -45,14 +45,14 @@
             <div class="question-card" data-index="2">
                 <div class="card-header">
                     <span class="question-number">Q2</span>
-                    <span class="difficulty-badge">Medium Brain</span>
                 </div>
                 <div class="card-content">
-                    <h3>Do you ever really wake up...</h3>
-                    <p class="question-text">...or just forget you were asleep? 😴</p>
-                    <button class="reveal-btn">Reveal Answer</button>
-                    <div class="answer hidden">
-                        <p><strong>Philosophical overload!</strong> Our brains create amnesia for sleep, so technically, you might never "know" you woke up if you don't remember falling asleep.</p>
+                    <h3>How do you handle stress at work or school?</h3>
+                    <div class="options-container">
+                        <button class="option-btn" data-mood="Happy">💪 I tackle it head-on!</button>
+                        <button class="option-btn" data-mood="Calm">🧘 I take deep breaths</button>
+                        <button class="option-btn" data-mood="Anxious">😰 It overwhelms me</button>
+                        <button class="option-btn" data-mood="Sad">😞 I want to avoid it</button>
                     </div>
                 </div>
             </div>
@@ -60,14 +60,14 @@
             <div class="question-card" data-index="3">
                 <div class="card-header">
                     <span class="question-number">Q3</span>
-                    <span class="difficulty-badge">Medium Brain</span>
                 </div>
                 <div class="card-content">
-                    <h3>If you try to fail...</h3>
-                    <p class="question-text">...and succeed, did you fail? 🤔</p>
-                    <button class="reveal-btn">Reveal Answer</button>
-                    <div class="answer hidden">
-                        <p><strong>Paradox alert!</strong> This touches on the psychology of intentionality. Your goal was to fail, so success means you failed at your goal—a delightful mental loop!</p>
+                    <h3>What's your social mood right now?</h3>
+                    <div class="options-container">
+                        <button class="option-btn" data-mood="Happy">🎉 Super social and fun!</button>
+                        <button class="option-btn" data-mood="Calm">👥 Comfortable in groups</button>
+                        <button class="option-btn" data-mood="Anxious">😬 Nervous around people</button>
+                        <button class="option-btn" data-mood="Sad">🏠 I prefer being alone</button>
                     </div>
                 </div>
             </div>
@@ -75,14 +75,14 @@
             <div class="question-card" data-index="4">
                 <div class="card-header">
                     <span class="question-number">Q4</span>
-                    <span class="difficulty-badge">Hard Brain</span>
                 </div>
                 <div class="card-content">
-                    <h3>Why is abbreviation...</h3>
-                    <p class="question-text">...such a long word? 📝</p>
-                    <button class="reveal-btn">Reveal Answer</button>
-                    <div class="answer hidden">
-                        <p><strong>Linguistic irony!</strong> Psychologically, our brains focus on meaning over form, so the contradiction doesn't bother us—until someone points it out!</p>
+                    <h3>How often do you feel creative inspiration?</h3>
+                    <div class="options-container">
+                        <button class="option-btn" data-mood="Happy">✨ Constantly! Ideas flow!</button>
+                        <button class="option-btn" data-mood="Calm">🎨 Regularly, it's natural</button>
+                        <button class="option-btn" data-mood="Anxious">🤔 Rarely, I overthink</button>
+                        <button class="option-btn" data-mood="Sad">❌ Haven't felt inspired lately</button>
                     </div>
                 </div>
             </div>
@@ -90,14 +90,14 @@
             <div class="question-card" data-index="5">
                 <div class="card-header">
                     <span class="question-number">Q5</span>
-                    <span class="difficulty-badge">Medium Brain</span>
                 </div>
                 <div class="card-content">
-                    <h3>If a tree falls in the forest...</h3>
-                    <p class="question-text">...and no one's around, does it make a sound? 🌳</p>
-                    <button class="reveal-btn">Reveal Answer</button>
-                    <div class="answer hidden">
-                        <p><strong>Depends on your psychology!</strong> Physics: yes, it makes sound waves. Perception: no, sound requires an ear and brain to interpret vibrations. Psychology wins!</p>
+                    <h3>When something goes wrong, what's your first reaction?</h3>
+                    <div class="options-container">
+                        <button class="option-btn" data-mood="Happy">😊 I laugh it off!</button>
+                        <button class="option-btn" data-mood="Calm">📍 I analyze and solve it</button>
+                        <button class="option-btn" data-mood="Anxious">😨 I panic for a moment</button>
+                        <button class="option-btn" data-mood="Sad">😩 I feel defeated</button>
                     </div>
                 </div>
             </div>
@@ -105,14 +105,14 @@
             <div class="question-card" data-index="6">
                 <div class="card-header">
                     <span class="question-number">Q6</span>
-                    <span class="difficulty-badge">Hard Brain</span>
                 </div>
                 <div class="card-content">
-                    <h3>Can you dream that you're awake...</h3>
-                    <p class="question-text">...and be dreaming right now? 💭</p>
-                    <button class="reveal-btn">Reveal Answer</button>
-                    <div class="answer hidden">
-                        <p><strong>Welcome to lucid dreaming!</strong> Your brain can experience the sensation of being awake while dreaming. Who's to say this isn't a dream right now?</p>
+                    <h3>How's your sleep quality lately?</h3>
+                    <div class="options-container">
+                        <button class="option-btn" data-mood="Happy">😴 Perfect, I sleep great!</button>
+                        <button class="option-btn" data-mood="Calm">🌙 Consistently good</button>
+                        <button class="option-btn" data-mood="Anxious">😵 Racing thoughts at night</button>
+                        <button class="option-btn" data-mood="Sad">😴 Sleeping too much</button>
                     </div>
                 </div>
             </div>
@@ -120,14 +120,14 @@
             <div class="question-card" data-index="7">
                 <div class="card-header">
                     <span class="question-number">Q7</span>
-                    <span class="difficulty-badge">Easy Brain</span>
                 </div>
                 <div class="card-content">
-                    <h3>Why do we park in...</h3>
-                    <p class="question-text">...driveways but drive on parkways? 🚗</p>
-                    <button class="reveal-btn">Reveal Answer</button>
-                    <div class="answer hidden">
-                        <p><strong>English is weird!</strong> Our brains evolved with language quirks. It's historical terminology that stuck, and our pattern-recognition brain never flagged the contradiction.</p>
+                    <h3>How do you feel about the future?</h3>
+                    <div class="options-container">
+                        <button class="option-btn" data-mood="Happy">🚀 Excited and optimistic!</button>
+                        <button class="option-btn" data-mood="Calm">🌱 Hopeful and patient</button>
+                        <button class="option-btn" data-mood="Anxious">😟 Uncertain and worried</button>
+                        <button class="option-btn" data-mood="Sad">🌧️ Pessimistic and lost</button>
                     </div>
                 </div>
             </div>
@@ -135,14 +135,14 @@
             <div class="question-card" data-index="8">
                 <div class="card-header">
                     <span class="question-number">Q8</span>
-                    <span class="difficulty-badge">Hard Brain</span>
                 </div>
                 <div class="card-content">
-                    <h3>If you're afraid of...</h3>
-                    <p class="question-text">...heights, does that include stairs? 😰</p>
-                    <button class="reveal-btn">Reveal Answer</button>
-                    <div class="answer hidden">
-                        <p><strong>Psychology of fear!</strong> Acrophobia is triggered by perception of danger. A staircase feels different—enclosed, controlled, safe—so your amygdala (fear center) chills out.</p>
+                    <h3>What's your current energy level?</h3>
+                    <div class="options-container">
+                        <button class="option-btn" data-mood="Happy">⚡ Through the roof!</button>
+                        <button class="option-btn" data-mood="Calm">🔋 Balanced and steady</button>
+                        <button class="option-btn" data-mood="Anxious">😖 Restless and jittery</button>
+                        <button class="option-btn" data-mood="Sad">🪫 Completely drained</button>
                     </div>
                 </div>
             </div>
@@ -150,14 +150,14 @@
             <div class="question-card" data-index="9">
                 <div class="card-header">
                     <span class="question-number">Q9</span>
-                    <span class="difficulty-badge">Medium Brain</span>
                 </div>
                 <div class="card-content">
-                    <h3>Why don't we ever see...</h3>
-                    <p class="question-text">...baby pigeons in the city? 🐦</p>
-                    <button class="reveal-btn">Reveal Answer</button>
-                    <div class="answer hidden">
-                        <p><strong>Cognitive bias alert!</strong> Pigeons stay in nests for 25-32 days before fledging. We're just not there to see them, but our brain assumes they don't exist!</p>
+                    <h3>How satisfied are you with your life right now?</h3>
+                    <div class="options-container">
+                        <button class="option-btn" data-mood="Happy">😄 Very satisfied!</button>
+                        <button class="option-btn" data-mood="Calm">✌️ Content and grateful</button>
+                        <button class="option-btn" data-mood="Anxious">😕 It's complicated</button>
+                        <button class="option-btn" data-mood="Sad">😞 Quite unhappy</button>
                     </div>
                 </div>
             </div>
@@ -165,28 +165,69 @@
             <div class="question-card" data-index="10">
                 <div class="card-header">
                     <span class="question-number">Q10</span>
-                    <span class="difficulty-badge">Hard Brain</span>
                 </div>
                 <div class="card-content">
-                    <h3>What's the speed of dark? ⚫</h3>
-                    <p class="question-text">Is it faster than light?</p>
-                    <button class="reveal-btn">Reveal Answer</button>
-                    <div class="answer hidden">
-                        <p><strong>Trick question psychology!</strong> Dark is the absence of light—it has no speed. Our brains love symmetry, so this question feels deep but it's actually meaningless!</p>
+                    <h3>How do you treat yourself on bad days?</h3>
+                    <div class="options-container">
+                        <button class="option-btn" data-mood="Happy">🎉 Turn it into an adventure!</button>
+                        <button class="option-btn" data-mood="Calm">🛀 Self-care and reflection</button>
+                        <button class="option-btn" data-mood="Anxious">😢 I fall into worry loops</button>
+                        <button class="option-btn" data-mood="Sad">🚫 I isolate myself</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="fun-section">
-            <h2 class="section-title">🎯 Test Your Brain</h2>
-            <button class="btn-large" id="shuffle-btn">Shuffle Questions</button>
-            <button class="btn-large btn-reset" id="reset-btn">Reset All</button>
+            <h2 class="section-title">📊 Your Mood Profile</h2>
+            <div id="moodProfile" class="mood-profile hidden">
+                <div class="mood-result">
+                    <h3 id="moodTitle">Your Current Mood</h3>
+                    <p id="moodDescription"></p>
+                    <div class="mood-bars">
+                        <div class="mood-bar">
+                            <span>😄 Happy</span>
+                            <div class="bar"><div class="fill" id="happyBar"></div></div>
+                            <span id="happyPercent">0%</span>
+                        </div>
+                        <div class="mood-bar">
+                            <span>😌 Calm</span>
+                            <div class="bar"><div class="fill" id="calmBar"></div></div>
+                            <span id="calmPercent">0%</span>
+                        </div>
+                        <div class="mood-bar">
+                            <span>😰 Anxious</span>
+                            <div class="bar"><div class="fill" id="anxiousBar"></div></div>
+                            <span id="anxiousPercent">0%</span>
+                        </div>
+                        <div class="mood-bar">
+                            <span>😔 Sad</span>
+                            <div class="bar"><div class="fill" id="sadBar"></div></div>
+                            <span id="sadPercent">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-group">
+                <button class="btn-large" id="submitBtn" style="display: none;">Submit Answers</button>
+                <button class="btn-large" id="newBtn" style="display: none;">Take Quiz Again</button>
+                <button class="btn-large btn-reset" id="viewHistoryBtn">View History</button>
+            </div>
+        </div>
+
+        <div id="historyModal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>📈 Mood History</h2>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div id="historyList" class="history-list"></div>
+            </div>
         </div>
     </div>
 
     <footer>
-        <p>Made with 💚 for curious minds | © 2026 Psychology Mind Bender</p>
+        <p>Made with 💚 for self-discovery | © 2026 Psychology Mood Quiz</p>
     </footer>
 
     <script src="script.js"></script>
