@@ -5,10 +5,13 @@ const QUESTIONS = [
         animal: "🐢",
         speech: "Let's start gently... How's your morning mood?",
         options: [
-            { text: "🌟 Energized and ready!", mood: "Happy" },
-            { text: "😌 Peaceful and relaxed", mood: "Calm" },
+            { text: "⚡ Energized and pumped!", mood: "Energized" },
+            { text: "😌 Peaceful and calm", mood: "Peaceful" },
+            { text: "💡 Creative and inspired", mood: "Creative" },
             { text: "😟 Worried about the day", mood: "Anxious" },
-            { text: "😔 Tired and unmotivated", mood: "Sad" }
+            { text: "😔 Tired and unmotivated", mood: "Melancholic" },
+            { text: "💪 Ready to conquer", mood: "Confident" },
+            { text: "🤔 Reflective and thoughtful", mood: "Reflective" }
         ]
     },
     {
@@ -16,10 +19,13 @@ const QUESTIONS = [
         animal: "🦁",
         speech: "Time to face the challenges! How brave are you?",
         options: [
-            { text: "💪 I tackle it head-on!", mood: "Happy" },
-            { text: "🧘 I take deep breaths", mood: "Calm" },
+            { text: "🔥 I attack it with passion!", mood: "Energized" },
+            { text: "🧘 I take deep breaths", mood: "Peaceful" },
+            { text: "💭 I think creatively", mood: "Creative" },
             { text: "😰 It overwhelms me", mood: "Anxious" },
-            { text: "😞 I want to avoid it", mood: "Sad" }
+            { text: "😞 I want to avoid it", mood: "Melancholic" },
+            { text: "🦾 I'm strong enough", mood: "Confident" },
+            { text: "🔍 I analyze it deeply", mood: "Reflective" }
         ]
     },
     {
@@ -27,10 +33,13 @@ const QUESTIONS = [
         animal: "🦋",
         speech: "Let's flutter through your social life!",
         options: [
-            { text: "🎉 Super social and fun!", mood: "Happy" },
-            { text: "👥 Comfortable in groups", mood: "Calm" },
+            { text: "🎉 Super social and fun!", mood: "Energized" },
+            { text: "👥 Comfortable in groups", mood: "Peaceful" },
+            { text: "✨ Inspiring conversations", mood: "Creative" },
             { text: "😬 Nervous around people", mood: "Anxious" },
-            { text: "🏠 I prefer being alone", mood: "Sad" }
+            { text: "🏠 I prefer being alone", mood: "Melancholic" },
+            { text: "🎤 I love being in charge", mood: "Confident" },
+            { text: "👂 I listen deeply", mood: "Reflective" }
         ]
     },
     {
@@ -38,10 +47,13 @@ const QUESTIONS = [
         animal: "🦉",
         speech: "Wise owl here! How creative are you feeling?",
         options: [
-            { text: "✨ Constantly! Ideas flow!", mood: "Happy" },
-            { text: "🎨 Regularly, it's natural", mood: "Calm" },
+            { text: "⚡ Ideas everywhere!", mood: "Energized" },
+            { text: "🎨 Steady and natural", mood: "Peaceful" },
+            { text: "🌈 Very creative currently", mood: "Creative" },
             { text: "🤔 Rarely, I overthink", mood: "Anxious" },
-            { text: "❌ Haven't felt inspired lately", mood: "Sad" }
+            { text: "❌ Haven't felt inspired", mood: "Melancholic" },
+            { text: "🎯 I'm brilliant today", mood: "Confident" },
+            { text: "💭 I'm exploring ideas", mood: "Reflective" }
         ]
     },
     {
@@ -49,10 +61,13 @@ const QUESTIONS = [
         animal: "🦊",
         speech: "Tricky moments need clever thinking!",
         options: [
-            { text: "😊 I laugh it off!", mood: "Happy" },
-            { text: "📍 I analyze and solve it", mood: "Calm" },
+            { text: "💥 I spring into action!", mood: "Energized" },
+            { text: "🧘 I stay calm and centered", mood: "Peaceful" },
+            { text: "💡 I find a creative solution", mood: "Creative" },
             { text: "😨 I panic for a moment", mood: "Anxious" },
-            { text: "😩 I feel defeated", mood: "Sad" }
+            { text: "😩 I feel defeated", mood: "Melancholic" },
+            { text: "🦾 I can handle this", mood: "Confident" },
+            { text: "🔍 I learn from it", mood: "Reflective" }
         ]
     },
     {
@@ -60,10 +75,13 @@ const QUESTIONS = [
         animal: "🦝",
         speech: "Time to check on your rest!",
         options: [
-            { text: "😴 Perfect, I sleep great!", mood: "Happy" },
-            { text: "🌙 Consistently good", mood: "Calm" },
+            { text: "⚡ Energized all day", mood: "Energized" },
+            { text: "🌙 Deep and restful", mood: "Peaceful" },
+            { text: "💭 Dreams are vivid", mood: "Creative" },
             { text: "😵 Racing thoughts at night", mood: "Anxious" },
-            { text: "😴 Sleeping too much", mood: "Sad" }
+            { text: "😴 Sleeping too much", mood: "Melancholic" },
+            { text: "💪 Waking up strong", mood: "Confident" },
+            { text: "🌙 Peaceful slumber", mood: "Reflective" }
         ]
     },
     {
@@ -71,10 +89,13 @@ const QUESTIONS = [
         animal: "🦅",
         speech: "Let's soar into your future outlook!",
         options: [
-            { text: "🚀 Excited and optimistic!", mood: "Happy" },
-            { text: "🌱 Hopeful and patient", mood: "Calm" },
+            { text: "🚀 Excited and optimistic!", mood: "Energized" },
+            { text: "🌱 Hopeful and patient", mood: "Peaceful" },
+            { text: "✨ Full of possibilities", mood: "Creative" },
             { text: "😟 Uncertain and worried", mood: "Anxious" },
-            { text: "🌧️ Pessimistic and lost", mood: "Sad" }
+            { text: "🌧️ Pessimistic and lost", mood: "Melancholic" },
+            { text: "💎 I'll achieve my goals", mood: "Confident" },
+            { text: "🤔 I'm considering paths", mood: "Reflective" }
         ]
     },
     {
@@ -82,10 +103,13 @@ const QUESTIONS = [
         animal: "🐇",
         speech: "Hop along! What's your energy like?",
         options: [
-            { text: "⚡ Through the roof!", mood: "Happy" },
-            { text: "🔋 Balanced and steady", mood: "Calm" },
+            { text: "⚡ Through the roof!", mood: "Energized" },
+            { text: "🔋 Balanced and steady", mood: "Peaceful" },
+            { text: "🔥 Creative fire burning", mood: "Creative" },
             { text: "😖 Restless and jittery", mood: "Anxious" },
-            { text: "🪫 Completely drained", mood: "Sad" }
+            { text: "🪫 Completely drained", mood: "Melancholic" },
+            { text: "💪 Strong and capable", mood: "Confident" },
+            { text: "⚖️ Centered and grounded", mood: "Reflective" }
         ]
     },
     {
@@ -93,10 +117,13 @@ const QUESTIONS = [
         animal: "🦚",
         speech: "Strut proudly! How proud are you of your life?",
         options: [
-            { text: "😄 Very satisfied!", mood: "Happy" },
-            { text: "✌️ Content and grateful", mood: "Calm" },
+            { text: "😄 Very satisfied!", mood: "Energized" },
+            { text: "✌️ Content and grateful", mood: "Peaceful" },
+            { text: "🌈 Inspired by my life", mood: "Creative" },
             { text: "😕 It's complicated", mood: "Anxious" },
-            { text: "😞 Quite unhappy", mood: "Sad" }
+            { text: "😞 Quite unhappy", mood: "Melancholic" },
+            { text: "👑 I'm proud of myself", mood: "Confident" },
+            { text: "🪞 I'm working on myself", mood: "Reflective" }
         ]
     },
     {
@@ -104,10 +131,13 @@ const QUESTIONS = [
         animal: "🐘",
         speech: "Remember, you're strong! How do you self-soothe?",
         options: [
-            { text: "🎉 Turn it into an adventure!", mood: "Happy" },
-            { text: "🛀 Self-care and reflection", mood: "Calm" },
-            { text: "😢 I fall into worry loops", mood: "Anxious" },
-            { text: "🚫 I isolate myself", mood: "Sad" }
+            { text: "🎉 Turn it into adventure", mood: "Energized" },
+            { text: "🛀 Self-care and peace", mood: "Peaceful" },
+            { text: "🎨 Express creatively", mood: "Creative" },
+            { text: "😢 I worry loops", mood: "Anxious" },
+            { text: "🚫 I isolate myself", mood: "Melancholic" },
+            { text: "🦾 I push through tough", mood: "Confident" },
+            { text: "📖 I journal and reflect", mood: "Reflective" }
         ]
     }
 ];
@@ -118,7 +148,15 @@ class MoodQuiz {
         this.currentQuestion = 0;
         this.answers = {};
         this.userName = "";
-        this.moodScores = { Happy: 0, Calm: 0, Anxious: 0, Sad: 0 };
+        this.moodScores = { 
+            Energized: 0, 
+            Peaceful: 0, 
+            Creative: 0, 
+            Anxious: 0, 
+            Melancholic: 0,
+            Confident: 0,
+            Reflective: 0
+        };
         this.init();
     }
 
@@ -332,61 +370,101 @@ class MoodQuiz {
     }
 
     calculateMoodScores() {
-        this.moodScores = { Happy: 0, Calm: 0, Anxious: 0, Sad: 0 };
+        this.moodScores = { 
+            Energized: 0, 
+            Peaceful: 0, 
+            Creative: 0, 
+            Anxious: 0, 
+            Melancholic: 0,
+            Confident: 0,
+            Reflective: 0
+        };
         Object.values(this.answers).forEach(mood => {
-            this.moodScores[mood]++;
+            if (this.moodScores.hasOwnProperty(mood)) {
+                this.moodScores[mood]++;
+            }
         });
     }
 
     displayResultsPopup() {
         const total = QUESTIONS.length;
-        const percentages = {
-            Happy: (this.moodScores.Happy / total) * 100,
-            Calm: (this.moodScores.Calm / total) * 100,
-            Anxious: (this.moodScores.Anxious / total) * 100,
-            Sad: (this.moodScores.Sad / total) * 100
-        };
-
+        
         const primaryMood = Object.keys(this.moodScores).reduce((a, b) =>
             this.moodScores[a] > this.moodScores[b] ? a : b
         );
 
-        const moodEmojis = { Happy: '😄', Calm: '😌', Anxious: '😰', Sad: '😔' };
+        const moodEmojis = { 
+            Energized: '⚡', 
+            Peaceful: '😌', 
+            Creative: '✨', 
+            Anxious: '😰', 
+            Melancholic: '😔',
+            Confident: '💪',
+            Reflective: '🤔'
+        };
+        
         const moodDescriptions = {
-            Happy: `Awesome, ${this.userName}! You're feeling optimistic and energized! Your positive vibes are infectious. Keep spreading that joy!`,
-            Calm: `Great job, ${this.userName}! You're in a peaceful and balanced state. Your mindful approach shows great emotional stability!`,
-            Anxious: `${this.userName}, you're experiencing some worries and stress. Remember to breathe and take things one step at a time. You've got this!`,
-            Sad: `${this.userName}, you're going through a challenging time. It's okay to feel this way. Consider reaching out for support from friends or family.`
+            Energized: `${this.userName}, you're absolutely vibrant! You're bursting with energy and enthusiasm. Your dynamic spirit is magnetic - keep channeling this powerful energy into everything you do. You're unstoppable!`,
+            Peaceful: `${this.userName}, you embody serenity. You have a calm, balanced nature that brings tranquility to those around you. Your mindful presence is a gift. Keep nurturing this inner peace.`,
+            Creative: `${this.userName}, your imagination is on fire! You're in a state of pure creative flow. Your innovative mind is full of brilliant ideas. Trust your intuition and let your creativity flourish!`,
+            Anxious: `${this.userName}, you're carrying some worries right now. It's completely normal to feel this way. Remember: you're stronger than your concerns. Take things one step at a time, breathe deeply, and reach out for support when needed.`,
+            Melancholic: `${this.userName}, you're experiencing deeper emotions right now. It's okay to feel down sometimes - this is part of being human. Consider self-care, talk to loved ones, and remember that this phase will pass.`,
+            Confident: `${this.userName}, you're feeling like a champion! Your self-assurance is inspiring. You trust in your abilities and that's your superpower. Keep believing in yourself - you've got what it takes!`,
+            Reflective: `${this.userName}, you're in a thoughtful, introspective state. You're processing life deeply and wisely. This reflective nature is beautiful - keep exploring your thoughts and gaining wisdom from your experiences.`
         };
 
         document.getElementById('moodEmojiLarge').textContent = moodEmojis[primaryMood];
-        document.getElementById('moodTitleResult').textContent = `You're feeling ${primaryMood}`;
+        document.getElementById('moodTitleResult').textContent = `You're ${primaryMood}`;
         document.getElementById('moodDescriptionResult').textContent = moodDescriptions[primaryMood];
 
-        // Update bars
+        // Update primary stat bar only
         setTimeout(() => {
-            document.getElementById('statHappy').style.width = percentages.Happy + '%';
-            document.getElementById('statCalm').style.width = percentages.Calm + '%';
-            document.getElementById('statAnxious').style.width = percentages.Anxious + '%';
-            document.getElementById('statSad').style.width = percentages.Sad + '%';
+            const moodScore = this.moodScores[primaryMood];
+            const percentages = Object.keys(this.moodScores).reduce((obj, mood) => {
+                obj[mood] = (this.moodScores[mood] / total) * 100;
+                return obj;
+            }, {});
 
-            document.getElementById('statHappyValue').textContent = Math.round(percentages.Happy) + '%';
-            document.getElementById('statCalmValue').textContent = Math.round(percentages.Calm) + '%';
-            document.getElementById('statAnxiousValue').textContent = Math.round(percentages.Anxious) + '%';
-            document.getElementById('statSadValue').textContent = Math.round(percentages.Sad) + '%';
+            // Populate all mood stats but highlight primary
+            const moodKeys = ['Energized', 'Peaceful', 'Creative', 'Anxious', 'Melancholic', 'Confident', 'Reflective'];
+            const moodEmojisDisplay = { 
+                Energized: '⚡', 
+                Peaceful: '😌', 
+                Creative: '✨', 
+                Anxious: '😰', 
+                Melancholic: '😔',
+                Confident: '💪',
+                Reflective: '🤔'
+            };
+            
+            let statsHTML = '';
+            moodKeys.forEach(mood => {
+                statsHTML += `
+                    <div class="stat-card ${mood === primaryMood ? 'primary-mood' : ''}">
+                        <span class="stat-emoji">${moodEmojisDisplay[mood]}</span>
+                        <span class="stat-label">${mood}</span>
+                        <div class="stat-bar"><div class="stat-fill" style="width: ${percentages[mood]}%; transition: width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);"></div></div>
+                        <span class="stat-value">${Math.round(percentages[mood])}%</span>
+                    </div>
+                `;
+            });
+            
+            document.querySelector('.stats-grid').innerHTML = statsHTML;
         }, 100);
 
         document.getElementById('resultsModal').classList.remove('hidden');
     }
 
     storeResult() {
+        const primaryMood = Object.keys(this.moodScores).reduce((a, b) =>
+            this.moodScores[a] > this.moodScores[b] ? a : b
+        );
+        
         const result = {
             name: this.userName,
             timestamp: new Date().toLocaleString(),
             date: new Date(),
-            mood: Object.keys(this.moodScores).reduce((a, b) =>
-                this.moodScores[a] > this.moodScores[b] ? a : b
-            ),
+            mood: primaryMood,
             scores: { ...this.moodScores },
             answers: { ...this.answers }
         };
@@ -404,17 +482,22 @@ class MoodQuiz {
     sendToGoogleSheet() {
         // Prepare data for Google Sheet
         const now = new Date();
+        const primaryMood = Object.keys(this.moodScores).reduce((a, b) =>
+            this.moodScores[a] > this.moodScores[b] ? a : b
+        );
+        
         const quizData = {
             name: this.userName,
             date: now.toLocaleDateString(),
             time: now.toLocaleTimeString(),
-            mood: Object.keys(this.moodScores).reduce((a, b) =>
-                this.moodScores[a] > this.moodScores[b] ? a : b
-            ),
-            happy: Math.round(this.moodScores['Happy']),
-            calm: Math.round(this.moodScores['Calm']),
-            anxious: Math.round(this.moodScores['Anxious']),
-            sad: Math.round(this.moodScores['Sad']),
+            mood: primaryMood,
+            energized: this.moodScores['Energized'] || 0,
+            peaceful: this.moodScores['Peaceful'] || 0,
+            creative: this.moodScores['Creative'] || 0,
+            anxious: this.moodScores['Anxious'] || 0,
+            melancholic: this.moodScores['Melancholic'] || 0,
+            confident: this.moodScores['Confident'] || 0,
+            reflective: this.moodScores['Reflective'] || 0,
             answers: JSON.stringify(this.answers),
             timestamp: now.toISOString()
         };
@@ -433,7 +516,7 @@ class MoodQuiz {
             return;
         }
 
-        let csv = 'Name,Date,Time,Mood,Happy%,Calm%,Anxious%,Sad%\n';
+        let csv = 'Name,Date,Time,Mood,Energized%,Peaceful%,Creative%,Anxious%,Melancholic%,Confident%,Reflective%\n';
 
         history.forEach(result => {
             const date = new Date(result.date);
@@ -444,10 +527,13 @@ class MoodQuiz {
                 dateStr,
                 timeStr,
                 result.mood,
-                Math.round((result.scores.Happy / 10) * 100),
-                Math.round((result.scores.Calm / 10) * 100),
+                Math.round((result.scores.Energized / 10) * 100),
+                Math.round((result.scores.Peaceful / 10) * 100),
+                Math.round((result.scores.Creative / 10) * 100),
                 Math.round((result.scores.Anxious / 10) * 100),
-                Math.round((result.scores.Sad / 10) * 100)
+                Math.round((result.scores.Melancholic / 10) * 100),
+                Math.round((result.scores.Confident / 10) * 100),
+                Math.round((result.scores.Reflective / 10) * 100)
             ];
             csv += row.join(',') + '\n';
         });
@@ -481,10 +567,13 @@ class MoodQuiz {
                             <div class="history-item-mood">${this.getMoodEmoji(item.mood)} ${item.mood}</div>
                         </div>
                         <div class="history-item-scores">
-                            <div class="score-badge">😄 ${item.scores.Happy}</div>
-                            <div class="score-badge">😌 ${item.scores.Calm}</div>
-                            <div class="score-badge">😰 ${item.scores.Anxious}</div>
-                            <div class="score-badge">😔 ${item.scores.Sad}</div>
+                            <div class="score-badge">⚡ ${item.scores.Energized || 0}</div>
+                            <div class="score-badge">😌 ${item.scores.Peaceful || 0}</div>
+                            <div class="score-badge">✨ ${item.scores.Creative || 0}</div>
+                            <div class="score-badge">😰 ${item.scores.Anxious || 0}</div>
+                            <div class="score-badge">😔 ${item.scores.Melancholic || 0}</div>
+                            <div class="score-badge">💪 ${item.scores.Confident || 0}</div>
+                            <div class="score-badge">🤔 ${item.scores.Reflective || 0}</div>
                         </div>
                     </div>
                 `;
@@ -498,7 +587,15 @@ class MoodQuiz {
         this.currentQuestion = 0;
         this.answers = {};
         this.userName = "";
-        this.moodScores = { Happy: 0, Calm: 0, Anxious: 0, Sad: 0 };
+        this.moodScores = { 
+            Energized: 0, 
+            Peaceful: 0, 
+            Creative: 0, 
+            Anxious: 0, 
+            Melancholic: 0,
+            Confident: 0,
+            Reflective: 0
+        };
 
         document.getElementById('resultsModal').classList.add('hidden');
         document.getElementById('historyModal').classList.add('hidden');
@@ -510,7 +607,15 @@ class MoodQuiz {
     }
 
     getMoodEmoji(mood) {
-        const emojis = { Happy: '😄', Calm: '😌', Anxious: '😰', Sad: '😔' };
+        const emojis = { 
+            Energized: '⚡', 
+            Peaceful: '😌', 
+            Creative: '✨', 
+            Anxious: '😰', 
+            Melancholic: '😔',
+            Confident: '💪',
+            Reflective: '🤔'
+        };
         return emojis[mood] || '😐';
     }
 }
