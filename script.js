@@ -220,6 +220,8 @@ class MoodQuiz {
         `).join('');
 
         container.querySelectorAll('.option-btn').forEach(btn => {
+            btn.disabled = false;
+            btn.style.pointerEvents = 'auto';
             btn.addEventListener('click', (e) => this.selectAnswer(e));
         });
     }
@@ -235,12 +237,45 @@ class MoodQuiz {
         btn.classList.add('selected');
         this.answers[this.currentQuestion] = mood;
 
-        // Auto-advance to next question after user sees selection
+        // Create particle burst effect
+        this.createParticleBurst(btn);
+
+        // Auto-advance to next question after particle animation
         setTimeout(() => {
             if (this.currentQuestion < QUESTIONS.length - 1) {
                 this.nextQuestion();
             }
-        }, 600);
+        }, 1000);
+    }
+
+    createParticleBurst(btn) {
+        const rect = btn.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+
+        // Emojis to burst
+        const emojis = ['✨', '⭐', '💫', '🎆', '🎇', '🌟', '💥', '🔥'];
+        
+        for (let i = 0; i < 8; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.textContent = emojis[i];
+            particle.style.left = centerX + 'px';
+            particle.style.top = centerY + 'px';
+            particle.style.animation = `particleBurst${i + 1} 0.8s ease-out forwards`;
+            document.body.appendChild(particle);
+
+            // Remove particle after animation
+            setTimeout(() => {
+                particle.remove();
+            }, 800);
+        }
+
+        // Disable all option buttons during animation
+        document.querySelectorAll('.option-btn').forEach(b => {
+            b.disabled = true;
+            b.style.pointerEvents = 'none';
+        });
     }
 
     previousQuestion() {

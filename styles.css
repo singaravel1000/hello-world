@@ -51,6 +51,106 @@
     to { opacity: 1; }
 }
 
+/* ============================================
+   PARTICLE BURST ANIMATIONS
+   ============================================ */
+
+@keyframes particleBurst1 {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(150px, -150px) scale(0.2) rotate(360deg);
+    }
+}
+
+@keyframes particleBurst2 {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-150px, -140px) scale(0.2) rotate(-360deg);
+    }
+}
+
+@keyframes particleBurst3 {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(120px, 140px) scale(0.2) rotate(360deg);
+    }
+}
+
+@keyframes particleBurst4 {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-130px, 150px) scale(0.2) rotate(-360deg);
+    }
+}
+
+@keyframes particleBurst5 {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(180px, 50px) scale(0.2) rotate(360deg);
+    }
+}
+
+@keyframes particleBurst6 {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-170px, 60px) scale(0.2) rotate(-360deg);
+    }
+}
+
+@keyframes particleBurst7 {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(100px, -180px) scale(0.2) rotate(360deg);
+    }
+}
+
+@keyframes particleBurst8 {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-140px, -160px) scale(0.2) rotate(-360deg);
+    }
+}
+
+.particle {
+    position: fixed;
+    pointer-events: none;
+    font-size: 2rem;
+    z-index: 999;
+}    to { opacity: 1; }
+}
+
 @keyframes pulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.8; }
