@@ -264,8 +264,11 @@ class MoodQuiz {
         // Show results popup
         this.displayResultsPopup();
 
-        // Store result
+        // Store result in localStorage
         this.storeResult();
+
+        // Send to Google Sheets
+        this.sendToGoogleSheet();
     }
 
     calculateMoodScores() {
@@ -336,6 +339,30 @@ class MoodQuiz {
         }
 
         localStorage.setItem('moodHistory', JSON.stringify(history));
+    }
+
+    sendToGoogleSheet() {
+        // Prepare data for Google Sheet
+        const now = new Date();
+        const quizData = {
+            name: this.userName,
+            date: now.toLocaleDateString(),
+            time: now.toLocaleTimeString(),
+            mood: Object.keys(this.moodScores).reduce((a, b) =>
+                this.moodScores[a] > this.moodScores[b] ? a : b
+            ),
+            happy: Math.round(this.moodScores['Happy']),
+            calm: Math.round(this.moodScores['Calm']),
+            anxious: Math.round(this.moodScores['Anxious']),
+            sad: Math.round(this.moodScores['Sad']),
+            answers: JSON.stringify(this.answers),
+            timestamp: now.toISOString()
+        };
+
+        // Send to Google Sheet using the config function
+        if (typeof sendToGoogleSheet === 'function') {
+            sendToGoogleSheet(quizData);
+        }
     }
 
     downloadResults() {
