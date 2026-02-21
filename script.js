@@ -205,12 +205,9 @@ class MoodQuiz {
         const nextBtn = document.getElementById('nextBtn');
         const submitBtn = document.getElementById('submitBtn');
 
-        prevBtn.style.display = index > 0 ? 'inline-block' : 'none';
-        nextBtn.style.display = index < QUESTIONS.length - 1 ? 'inline-block' : 'none';
-        submitBtn.style.display = index === QUESTIONS.length - 1 ? 'inline-block' : 'none';
-
-        // Scroll to content
-        document.getElementById('quizScreen').scrollIntoView({ behavior: 'smooth' });
+        prevBtn.style.display = index > 0 ? 'block' : 'none';
+        nextBtn.style.display = index < QUESTIONS.length - 1 ? 'block' : 'none';
+        submitBtn.style.display = index === QUESTIONS.length - 1 ? 'block' : 'none';
     }
 
     renderOptions(options) {
