@@ -245,16 +245,13 @@ class MoodQuiz {
             if (this.currentQuestion < QUESTIONS.length - 1) {
                 this.nextQuestion();
             }
-        }, 1100);
+        }, 1300);
     }
 
     createParticleBurst(btn) {
-        console.log('🎯 Rock burst started at:', btn);
         const rect = btn.getBoundingClientRect();
         const centerX = rect.left + rect.width / 2;
         const centerY = rect.top + rect.height / 2;
-
-        console.log('Particle center:', centerX, centerY);
 
         // Rock particle colors
         const colors = [
@@ -277,25 +274,23 @@ class MoodQuiz {
             const particle = document.createElement('div');
             particle.className = 'rock-particle';
             
-            // Random size between 8px and 16px
-            const size = Math.random() * 8 + 8;
+            // Random size between 20px and 40px (larger, more visible)
+            const size = Math.random() * 20 + 20;
             particle.style.width = size + 'px';
             particle.style.height = size + 'px';
             particle.style.background = colors[i];
             particle.style.left = centerX + 'px';
             particle.style.top = centerY + 'px';
-            particle.style.animation = `rockBreak${(i % 12) + 1} 0.9s ease-out forwards`;
+            particle.style.transform = 'translate(-50%, -50%)';
+            particle.style.animation = `rockBreak${(i % 12) + 1} 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards`;
             
-            console.log(`Creating particle ${i + 1}: animation rockBreak${(i % 12) + 1}`);
             document.body.appendChild(particle);
 
             // Remove particle after animation
             setTimeout(() => {
                 particle.remove();
-            }, 900);
+            }, 1200);
         }
-
-        console.log('✅ 12 rock particles created!');
 
         // Disable all option buttons during animation
         document.querySelectorAll('.option-btn').forEach(b => {

@@ -190,10 +190,11 @@
 .rock-particle {
     position: fixed;
     pointer-events: none;
-    z-index: 999;
+    z-index: 9999;
     background: linear-gradient(135deg, #667eea, #764ba2);
-    border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.2);
+    will-change: transform, opacity;
 }
 
 .particle {
