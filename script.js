@@ -245,7 +245,7 @@ class MoodQuiz {
             if (this.currentQuestion < QUESTIONS.length - 1) {
                 this.nextQuestion();
             }
-        }, 1000);
+        }, 1100);
     }
 
     createParticleBurst(btn) {
@@ -253,22 +253,42 @@ class MoodQuiz {
         const centerX = rect.left + rect.width / 2;
         const centerY = rect.top + rect.height / 2;
 
-        // Emojis to burst
-        const emojis = ['✨', '⭐', '💫', '🎆', '🎇', '🌟', '💥', '🔥'];
-        
-        for (let i = 0; i < 8; i++) {
+        // Rock particle colors
+        const colors = [
+            'linear-gradient(135deg, #667eea, #764ba2)',
+            'linear-gradient(135deg, #f093fb, #f5576c)',
+            'linear-gradient(135deg, #4facfe, #00f2fe)',
+            'linear-gradient(135deg, #667eea, #764ba2)',
+            'linear-gradient(135deg, #f093fb, #4facfe)',
+            'linear-gradient(135deg, #764ba2, #f5576c)',
+            'linear-gradient(135deg, #667eea, #f093fb)',
+            'linear-gradient(135deg, #4facfe, #764ba2)',
+            'linear-gradient(135deg, #f5576c, #667eea)',
+            'linear-gradient(135deg, #764ba2, #4facfe)',
+            'linear-gradient(135deg, #667eea, #f5576c)',
+            'linear-gradient(135deg, #4facfe, #f093fb)'
+        ];
+
+        // Create 12 rock particles with varying sizes
+        for (let i = 0; i < 12; i++) {
             const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.textContent = emojis[i];
+            particle.className = 'rock-particle';
+            
+            // Random size between 8px and 16px
+            const size = Math.random() * 8 + 8;
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            particle.style.background = colors[i];
             particle.style.left = centerX + 'px';
             particle.style.top = centerY + 'px';
-            particle.style.animation = `particleBurst${i + 1} 0.8s ease-out forwards`;
+            particle.style.animation = `rockBreak${(i % 12) + 1} 0.9s ease-out forwards`;
+            
             document.body.appendChild(particle);
 
             // Remove particle after animation
             setTimeout(() => {
                 particle.remove();
-            }, 800);
+            }, 900);
         }
 
         // Disable all option buttons during animation
