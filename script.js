@@ -234,6 +234,13 @@ class MoodQuiz {
         // Mark new selection
         btn.classList.add('selected');
         this.answers[this.currentQuestion] = mood;
+
+        // Auto-advance to next question after user sees selection
+        setTimeout(() => {
+            if (this.currentQuestion < QUESTIONS.length - 1) {
+                this.nextQuestion();
+            }
+        }, 600);
     }
 
     previousQuestion() {
