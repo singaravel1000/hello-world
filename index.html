@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psychology Mood Quiz - One Question at a Time</title>
+    <title>Psychology Mood Quiz</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,119 +12,109 @@
     <div class="container">
         <!-- NAME INPUT SCREEN -->
         <div id="nameScreen" class="screen active">
-            <div class="screen-content">
-                <h1 class="title-main">🧠 Psychology Mood Quiz 🧠</h1>
-                <p class="subtitle">Discover your current mood through psychology!</p>
-                
-                <div class="name-input-box">
-                    <h2>Welcome, Friend! 👋</h2>
-                    <p>Before we start, what's your name?</p>
-                    <form id="nameForm">
-                        <input 
-                            type="text" 
-                            id="userNameInput" 
-                            placeholder="Enter your name..." 
-                            required
-                            maxlength="30"
-                        >
-                        <button type="submit" class="btn-large">Start Quiz 🚀</button>
-                    </form>
+            <div class="screen-center">
+                <div class="title-section">
+                    <h1 class="title-main">Psychology Mood Quiz</h1>
+                    <p class="subtitle">Discover your true emotional state</p>
                 </div>
+                
+                <form id="nameForm" class="name-input-form">
+                    <input 
+                        type="text" 
+                        id="userNameInput" 
+                        placeholder="Your name..." 
+                        required
+                        maxlength="30"
+                        class="input-name"
+                    >
+                    <button type="submit" class="btn-primary">Begin Quiz</button>
+                </form>
             </div>
         </div>
 
         <!-- QUIZ SCREEN -->
         <div id="quizScreen" class="screen hidden">
-            <div class="quiz-header">
-                <div class="header-left">
-                    <h2 id="userName" class="user-greeting"></h2>
-                </div>
-                <div class="header-right">
-                    <div class="progress-container">
-                        <span id="questionProgress">1/10</span>
-                        <div class="progress-bar">
-                            <div class="progress-fill" id="progressFill"></div>
-                        </div>
+            <div class="quiz-wrapper">
+                <!-- Progress Bar -->
+                <div class="progress-section">
+                    <div class="progress-info">
+                        <h2 id="userName" class="user-name"></h2>
+                        <span class="question-count" id="questionProgress">1/10</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
                     </div>
                 </div>
-            </div>
 
-            <div class="animal-container">
-                <div class="animal" id="animalDisplay">🐢</div>
-                <div class="speech-bubble" id="speechBubble"></div>
-            </div>
+                <!-- Question Card -->
+                <div class="question-card">
+                    <div class="animal-display">
+                        <div class="animal" id="animalDisplay">🐢</div>
+                    </div>
+                    
+                    <div class="question-section">
+                        <h3 id="questionText" class="question-text"></h3>
+                        <p id="speechBubble" class="speech-text"></p>
+                    </div>
 
-            <div class="quiz-content">
-                <h3 id="questionText"></h3>
-                
-                <div class="options-container" id="optionsContainer">
-                    <!-- Options will be generated here -->
+                    <!-- Options -->
+                    <div class="options-container" id="optionsContainer">
+                        <!-- Generated dynamically -->
+                    </div>
                 </div>
-            </div>
 
-            <div class="quiz-navigation">
-                <button class="btn-nav" id="prevBtn" style="display: none;">← Previous</button>
-                <button class="btn-nav" id="nextBtn" style="display: none;">Next →</button>
-                <button class="btn-large" id="submitBtn" style="display: none;">See My Mood 🎯</button>
+                <!-- Navigation -->
+                <div class="nav-buttons">
+                    <button class="btn-secondary" id="prevBtn" style="display: none;">← Back</button>
+                    <button class="btn-secondary" id="nextBtn" style="display: none;">Next →</button>
+                    <button class="btn-primary btn-submit" id="submitBtn" style="display: none;">Get Results</button>
+                </div>
             </div>
         </div>
 
-        <!-- RESULTS POPUP -->
+        <!-- RESULTS MODAL -->
         <div id="resultsModal" class="modal hidden">
             <div class="modal-backdrop"></div>
-            <div class="results-popup">
-                <div class="results-header">
-                    <h2>✨ Your Mood Profile ✨</h2>
-                    <button class="close-btn">&times;</button>
+            <div class="modal-content results-modal">
+                <button class="close-btn">&times;</button>
+                
+                <div class="mood-result">
+                    <div class="mood-emoji-lg" id="moodEmojiLarge">😐</div>
+                    <h2 id="moodTitleResult"></h2>
+                    <p id="moodDescriptionResult"></p>
                 </div>
 
-                <div class="results-content">
-                    <div class="mood-display">
-                        <div class="mood-emoji-large" id="moodEmojiLarge">😐</div>
-                        <h3 id="moodTitleResult"></h3>
-                        <p id="moodDescriptionResult"></p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-emoji">😄</span>
+                        <span class="stat-label">Happy</span>
+                        <div class="stat-bar"><div class="stat-fill" id="statHappy"></div></div>
+                        <span class="stat-value" id="statHappyValue">0%</span>
                     </div>
+                    <div class="stat-card">
+                        <span class="stat-emoji">😌</span>
+                        <span class="stat-label">Calm</span>
+                        <div class="stat-bar"><div class="stat-fill" id="statCalm"></div></div>
+                        <span class="stat-value" id="statCalmValue">0%</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-emoji">😰</span>
+                        <span class="stat-label">Anxious</span>
+                        <div class="stat-bar"><div class="stat-fill" id="statAnxious"></div></div>
+                        <span class="stat-value" id="statAnxiousValue">0%</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-emoji">😔</span>
+                        <span class="stat-label">Sad</span>
+                        <div class="stat-bar"><div class="stat-fill" id="statSad"></div></div>
+                        <span class="stat-value" id="statSadValue">0%</span>
+                    </div>
+                </div>
 
-                    <div class="mood-stats">
-                        <div class="mood-stat">
-                            <span class="stat-emoji">😄</span>
-                            <span class="stat-name">Happy</span>
-                            <div class="stat-bar">
-                                <div class="stat-fill" id="statHappy"></div>
-                            </div>
-                            <span class="stat-value" id="statHappyValue">0%</span>
-                        </div>
-                        <div class="mood-stat">
-                            <span class="stat-emoji">😌</span>
-                            <span class="stat-name">Calm</span>
-                            <div class="stat-bar">
-                                <div class="stat-fill" id="statCalm"></div>
-                            </div>
-                            <span class="stat-value" id="statCalmValue">0%</span>
-                        </div>
-                        <div class="mood-stat">
-                            <span class="stat-emoji">😰</span>
-                            <span class="stat-name">Anxious</span>
-                            <div class="stat-bar">
-                                <div class="stat-fill" id="statAnxious"></div>
-                            </div>
-                            <span class="stat-value" id="statAnxiousValue">0%</span>
-                        </div>
-                        <div class="mood-stat">
-                            <span class="stat-emoji">😔</span>
-                            <span class="stat-name">Sad</span>
-                            <div class="stat-bar">
-                                <div class="stat-fill" id="statSad"></div>
-                            </div>
-                            <span class="stat-value" id="statSadValue">0%</span>
-                        </div>
-                    </div>
-
-                    <div class="results-actions">
-                        <button class="btn-large" id="downloadBtn">📥 Download Results</button>
-                        <button class="btn-large" id="viewHistoryBtn">📈 View History</button>
-                        <button class="btn-large btn-reset" id="newQuizBtn">🔄 Take Quiz Again</button>
-                    </div>
+                <div class="action-buttons">
+                    <button class="btn-secondary" id="downloadBtn">📥 Download</button>
+                    <button class="btn-secondary" id="viewHistoryBtn">📊 History</button>
+                    <button class="btn-primary" id="newQuizBtn">Retry Quiz</button>
                 </div>
             </div>
         </div>
@@ -132,20 +122,13 @@
         <!-- HISTORY MODAL -->
         <div id="historyModal" class="modal hidden">
             <div class="modal-backdrop"></div>
-            <div class="history-popup">
-                <div class="modal-header">
-                    <h2>📊 Your Mood History</h2>
-                    <button class="close-btn">&times;</button>
-                </div>
+            <div class="modal-content history-modal">
+                <button class="close-btn">&times;</button>
+                <h2>Mood History</h2>
                 <div id="historyList" class="history-list"></div>
             </div>
         </div>
     </div>
-
-    <footer>
-        <h1>✨ SRSVELVIJAY ✨</h1>
-        <p>Made with 💚 for self-discovery | © 2026 Psychology Mood Quiz</p>
-    </footer>
 
     <script src="config.js"></script>
     <script src="script.js"></script>

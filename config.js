@@ -4,7 +4,7 @@
 
 const GOOGLE_SHEET_CONFIG = {
     // Your Google Apps Script web app URL
-    webhookUrl: 'https://script.google.com/macros/s/AKfycbxXU8NkHB4fBqUDy4QzfNlE1CiU4P5Ffrx2aHm42TItpwKoleK_KCCgBw5ewyUR_MES1A/exec',
+    webhookUrl: 'https://script.google.com/macros/s/AKfycbz1kQKiVo4qxTcu-aFcH-hzwPay_EnN1zBAY1riMAepzmbm4tYgn9f9nAO_Fb1eshMXmQ/exec',
     
     // Enable/disable Google Sheets integration
     enabled: true, // Set to true after adding your webhook URL// Set to true to log data instead of sending to Google Sheets
@@ -28,15 +28,16 @@ async function sendToGoogleSheet(quizData) {
     }
 
     try {
+        // Create FormData to avoid CORS preflight request
+        const formData = new FormData();
+        formData.append('data', JSON.stringify(quizData));
+        
         const response = await fetch(GOOGLE_SHEET_CONFIG.webhookUrl, {
             method: 'POST',
-            body: JSON.stringify(quizData),
-            headers: {
-                'Content-Type': 'application/json'
-            }
+            body: formData
         });
 
-        const result = await response.json();
+        const result = await response.text();
         console.log('✅ Data sent to Google Sheet:', result);
         return result;
     } catch (error) {
