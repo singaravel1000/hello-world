@@ -249,9 +249,12 @@ class MoodQuiz {
     }
 
     createParticleBurst(btn) {
+        console.log('🎯 Rock burst started at:', btn);
         const rect = btn.getBoundingClientRect();
         const centerX = rect.left + rect.width / 2;
         const centerY = rect.top + rect.height / 2;
+
+        console.log('Particle center:', centerX, centerY);
 
         // Rock particle colors
         const colors = [
@@ -283,6 +286,7 @@ class MoodQuiz {
             particle.style.top = centerY + 'px';
             particle.style.animation = `rockBreak${(i % 12) + 1} 0.9s ease-out forwards`;
             
+            console.log(`Creating particle ${i + 1}: animation rockBreak${(i % 12) + 1}`);
             document.body.appendChild(particle);
 
             // Remove particle after animation
@@ -290,6 +294,8 @@ class MoodQuiz {
                 particle.remove();
             }, 900);
         }
+
+        console.log('✅ 12 rock particles created!');
 
         // Disable all option buttons during animation
         document.querySelectorAll('.option-btn').forEach(b => {
